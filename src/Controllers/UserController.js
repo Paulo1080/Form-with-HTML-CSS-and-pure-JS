@@ -16,18 +16,24 @@ class UserController {
         console.log(user);
     }
 
+    validation (element) {
+        if(["name", "email", "phone", "password"].indexOf(element.name) > -1 && !element.value) {
+            element.classList.remove("success");
+            element.classList.add("error");
+            return  false;
+        }else {
+            element.classList.remove("error");
+            element.classList.add("success");
+        }
+    }
+
     getValues(){
         let user = {};
         let isvalid = true;
 
         [...this.form.elements].forEach((element, index)=>{
             
-            if(["name", "email", "phone", "password"].indexOf(element.name) > -1 && !element.value) {
-                element.classList.add("error");
-                isvalid = false;
-            }else {
-                element.classList.add("success");
-            }
+           isvalid = this.validation(element);
 
 
 
