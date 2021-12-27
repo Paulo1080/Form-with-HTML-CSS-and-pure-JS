@@ -20,3 +20,46 @@ input {
     justify-content: center;
     align-items: center;
 }
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-user input {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    min-width: 255px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid aquamarine;
+}
+
+#form-user button {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    min-width: 300px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: aqua;
+    border: none;
+}
+
+#form-user button:hover {
+    background-color: aquamarine;
+}
+
+@media (max-width: 700px){
+    .structure {
+        grid-template-columns: auto;
+    }
+}
