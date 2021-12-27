@@ -35,13 +35,14 @@ input, button {
     min-width: 255px;
 }
 
-input:invalid {
+.error {
     border: 2px solid red;
 }
 
-input:valid {
+.success {
     border: 2px solid aquamarine;
 }
+
 
 #form-user button {
     font-size: 20px;

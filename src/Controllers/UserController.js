@@ -18,12 +18,28 @@ class UserController {
 
     getValues(){
         let user = {};
+        let isvalid = true;
+
         [...this.form.elements].forEach((element, index)=>{
+            
+            if(["name", "email", "phone", "password"].indexOf(element.name) > -1 && !element.value) {
+                element.classList.add("error");
+                isvalid = false;
+            }else {
+                element.classList.add("success");
+            }
+
+
+
             if(element.name){
                 user[element.name] = element.value;
             }
         })
         
+        if(!isvalid) {
+            return false;
+        }
+
         let object = new User(user.name, user.email, user.phone, user.password);
 
         this.message(object);
