@@ -11,16 +11,17 @@
     <div class="structure">
 
         <form  id="form-user">
-            <input type="text" name="name" placeholder="Nome">
-            <input type="email" name="email" placeholder="E-mail">
-            <input type="number" name="celular" placeholder="Celular" minlength="11">
-            <input type="password" name="password" placeholder="Senha" minlength="6">
+            <input type="text" name="name" placeholder="Nome" value="">
+            <input type="email" name="email" placeholder="E-mail" value="">
+            <input type="number" name="phone" placeholder="Celular" minlength="11" value="">
+            <input type="password" name="password" placeholder="Senha" minlength="6" value="">
             <button type="submit">Cadastrar</button>
         </form>
         <div class="img-container">
             <img src="images/img-background.png" alt="Imagem do formulário">
         </div>
     </div>
+    <script src="src/Models/User.js"></script>
     <script src="src/Controllers/UserController.js"></script>
     <script src="index.js"></script>
 </body>
